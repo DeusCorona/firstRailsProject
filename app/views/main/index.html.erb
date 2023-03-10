@@ -40,10 +40,19 @@
     </header>
 	<main>
 		<div class="h-14 bg-gradient-to-r from-red-400 to-blue-500">
-			<h1 class="text-white font-semibold text-2xl sm:text-4xl text-center">
+			<h1 class="p-0 m-0 text-white font-semibold text-2xl sm:text-4xl text-center">
 				Find a free place for your child in kindergarten of your choosing!
 			</h1>
 		</div>
+        <%= form_tag do%>
+            <%= label_tag(:q, "Type your name:")%>
+            <%= text_field_tag(:q) %>
+
+            <%= label_tag(:q, "Type your email:") %>
+            <%= text_field_tag(:q) %>
+
+            <%= submit_tag("Send") %>
+        <% end %>
 	</main>
 
 <p><%= link_to "About", '/about' %></p>

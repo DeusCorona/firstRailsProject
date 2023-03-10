@@ -14,3 +14,8 @@
     * Go to app/javascript/application.js file and add the following: import "./custom/kindergarten"
     * Run rails assets:precompile
     * Start server
+
+* Rails forms:
+    * https://guides.rubyonrails.org/active_model_basics.html
+    * https://human-se.github.io/rails-demos-n-deets-2021/demos/new-create-forms/
+    * https://guides.rubyonrails.org/form_helpers.html
