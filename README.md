@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Info on dev environment, server deployment and few important notes I've encountered while making my 1st rails app
 
-Things you may want to cover:
+* Ruby on Rails v7
 
-* Ruby version
+* Start localhost deployment with bin/rails serve or rails s -p XXXX, where XXXX is a PORT number (5001 for me in a team)
 
-* System dependencies
+* Modify routes.rb with desired root, then generate adequate controller, view, helper and tests with bin/rails generate controller main index --skip-routes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Custom javascript files are linked through a following process described [here](https://stackoverflow.com/questions/70548841/how-to-add-custom-js-file-to-new-rails-7-project):
+    * Create custom folder under app/javascript and place your custom .js files in it
+    * Go to config/importmap.rb and add the following: pin_all_from "app/javascript/custom", under: "custom"
+    * Go to app/javascript/application.js file and add the following: import "./custom/kindergarten"
+    * Run rails assets:precompile
+    * Start server
