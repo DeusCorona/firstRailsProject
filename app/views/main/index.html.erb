@@ -39,20 +39,37 @@
 		  </nav>
     </header>
 	<main>
-		<div class="h-14 bg-gradient-to-r from-red-400 to-blue-500">
+		<div class="min-h-[50vh] bg-gradient-to-r from-red-400 to-blue-500 flex justify-center items-center">
 			<h1 class="p-0 m-0 text-white font-semibold text-2xl sm:text-4xl text-center">
-				Find a free place for your child in kindergarten of your choosing!
+				Find a free place for your child in the kindergarten of your choosing!
 			</h1>
 		</div>
-        <%= form_tag do%>
-            <%= label_tag(:q, "Type your name:")%>
-            <%= text_field_tag(:q) %>
-
-            <%= label_tag(:q, "Type your email:") %>
-            <%= text_field_tag(:q) %>
-
-            <%= submit_tag("Send") %>
-        <% end %>
+		<div class="flex flex-col items-center p-12 text-amber-500 bg-gray-600 text-xl text-left">
+			<h3 class="p-0 m-0 text-2xl">
+				Fill up the form with required information
+			</h3>
+			<%= form_with model: @select_form do |f| %>
+				<p class="my-8 text-white">
+					<%= f.label_tag(:q, "Type your name:")%>
+					<%= f.text_field_tag(:q) %>
+				</p>
+				<p class="my-8 text-white"> 
+					<%= f.label_tag(:q, "Type your email:") %>
+					<%= f.text_field_tag(:q) %>
+				</p>
+				<div class="my-8 flex justify-center">
+					<p class="text-white">
+						<%= f.label_tag(:q, "Select a desired kindergarten from list: ") %>
+					</p>
+					<p class="text-black">
+						<%= f.select_tag "Kindergarten selection", options_for_select([ "Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Name of the kindergarten, Adress" ], "Option 1") %>
+					</p>				
+				</div>
+				<button class="text-white bg-amber-500 rounded-md p-2">
+					<%= f.submit_tag("Send") %>
+				</button>
+        	<% end %>
+		</div>
 	</main>
 
 <p><%= link_to "About", '/about' %></p>
