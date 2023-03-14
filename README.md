@@ -19,3 +19,15 @@
     * https://guides.rubyonrails.org/active_model_basics.html
     * https://human-se.github.io/rails-demos-n-deets-2021/demos/new-create-forms/
     * https://guides.rubyonrails.org/form_helpers.html
+
+* Rails forms creation with :
+    1. Create Forms folder inside app folder
+    2. Inside Forms folder, create a Class that models your form (eg. if you have name and email inputs, add attr_accessors to it, as well as validators)
+    3. Change routes.rb inside app/config folder with adequate POST route to view where your form will be located
+    4. Create/Change controller that responds to view where your form will be located with @selector eg:
+        class MainController < ApplicationController
+            def index
+                @select_form = SelectForm.new
+            end
+        end
+    5. Utilise <%= form_with(model: @select_form, url:"/") do |f| %> <% end %> syntax when creating form

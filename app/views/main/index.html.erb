@@ -48,25 +48,25 @@
 			<h3 class="p-0 m-0 text-2xl">
 				Fill up the form with required information
 			</h3>
-			<%= form_with model: @select_form do |f| %>
+			<%= form_with(model: @select_form, url:"/") do |f| %>
 				<p class="my-8 text-white">
-					<%= f.label_tag(:q, "Type your name:")%>
-					<%= f.text_field_tag(:q) %>
+					<%= f.label :name%>
+					<%= f.text_field :name %>
 				</p>
 				<p class="my-8 text-white"> 
-					<%= f.label_tag(:q, "Type your email:") %>
-					<%= f.text_field_tag(:q) %>
+					<%= f.label :email %>
+					<%= f.text_field :email %>
 				</p>
 				<div class="my-8 flex justify-center">
 					<p class="text-white">
-						<%= f.label_tag(:q, "Select a desired kindergarten from list: ") %>
+						<%= f.label :select_kindergarten %>
 					</p>
 					<p class="text-black">
-						<%= f.select_tag "Kindergarten selection", options_for_select([ "Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Name of the kindergarten, Adress" ], "Option 1") %>
+						<%= f.select "Kindergarten selection", options_for_select([ "Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Name of the kindergarten, Adress" ], "Option 1") %>
 					</p>				
 				</div>
 				<button class="text-white bg-amber-500 rounded-md p-2">
-					<%= f.submit_tag("Send") %>
+					<%= f.submit :Send %>
 				</button>
         	<% end %>
 		</div>
