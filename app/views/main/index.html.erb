@@ -49,20 +49,28 @@
 				Fill up the form with required information
 			</h3>
 			<%= form_with(model: @select_form, url:"/") do |f| %>
-				<p class="my-8 text-white">
-					<%= f.label :name%>
-					<%= f.text_field :name %>
-				</p>
-				<p class="my-8 text-white"> 
-					<%= f.label :email %>
-					<%= f.text_field :email %>
-				</p>
-				<div class="my-8 flex justify-center">
-					<p class="text-white">
+				<div class="my-8 flex justify-left">
+					<p class="text-white mr-4">
+						<%= f.label :name, placeholder: "Name"%>
+					</p>
+					<p class="text-black">
+						<%= f.text_field :name , :required => 'required' %>
+					</p>				
+				</div>
+				<div class="my-8 flex justify-left">
+					<p class="text-white mr-4">
+						<%= f.label :email %>
+					</p>
+					<p class="text-black">
+						<%= f.email_field :email , :required => 'required' %>
+					</p>				
+				</div>
+				<div class="my-8 flex justify-left">
+					<p class="text-white mr-4">
 						<%= f.label :select_kindergarten %>
 					</p>
 					<p class="text-black">
-						<%= f.select "Kindergarten selection", options_for_select([ "Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Name of the kindergarten, Adress" ], "Option 1") %>
+						<%= f.select "kindergarten_selection", options_for_select([ "Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Name of the kindergarten, Adress" ], "Option 1"), :required => 'required' %>
 					</p>				
 				</div>
 				<button class="text-white bg-amber-500 rounded-md p-2">
