@@ -31,3 +31,5 @@
             end
         end
     5. Utilise <%= form_with(model: @select_form, url:"/") do |f| %> <% end %> syntax when creating form
+
+* Forming links inside view files to other view files eg: <p><%= link_to "About", '/about' %></p>
