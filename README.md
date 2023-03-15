@@ -33,3 +33,10 @@
     5. Utilise <%= form_with(model: @select_form, url:"/") do |f| %> <% end %> syntax when creating form
 
 * Forming links inside view files to other view files eg: <p><%= link_to "About", '/about' %></p>
+
+* Notes about form data submission and adapting controller to obtain POST data:
+    * Routes can be formed in such a way that single View component may have multiple routes attached to various methods defined in coresponding Controller eg. get request to: main#index and post request to: main#somePostMethod
+    * Extremely useful: using rails routes command to check routes. Method nomenclature in Controllers should be simple, as complicated names may lead to problematic route generation
+    * Form inside View must have proper URL target of a method that is supposed to collect data sent via form
+    * Data sent via forms comes via **params** , and is in a form of a hash (dictionary data structure)
+    * The general flow of action is: form inside View sends a POST request via routes to adequate method inside coresponding controller where data can be separated, analyzed and used

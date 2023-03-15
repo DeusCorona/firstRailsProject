@@ -1,9 +1,9 @@
 class MainController < ApplicationController
   def index
-    @select_form = SelectForm.new
   end
 
-  def selection_vars
+  def selection
+    @select_form = SelectForm.new
     name = params[:name]
     email = params[:email]
     kindergarten_selection = params[:kindergarten_selection]
