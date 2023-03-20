@@ -40,3 +40,13 @@
     * Form inside View must have proper URL target of a method that is supposed to collect data sent via form
     * Data sent via forms comes via **params** , and is in a form of a hash (dictionary data structure)
     * The general flow of action is: form inside View sends a POST request via routes to adequate method inside coresponding controller where data can be separated, analyzed and used
+    
+* Useful git workflow commands:
+git status - overview of the changes made in relation to current branch
+git add . - add all changed files to prepare for commit
+git commit -m "Some commit message" - commits the added changes to prepare for push
+git push - push changes onto the targeted branch
+git branch -all - displays all available branches
+git checkout - changes branch you're currently on
+git checkout -b "name of the branch you wish to create and position onto"
+git push --set-upstream origin "name of the branch you have created in previous step"
