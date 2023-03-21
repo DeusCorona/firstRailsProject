@@ -50,3 +50,8 @@ git branch -all - displays all available branches
 git checkout - changes branch you're currently on
 git checkout -b "name of the branch you wish to create and position onto"
 git push --set-upstream origin "name of the branch you have created in previous step"
+
+* Notes about maintaining git repo, branch naming conventions:
+    * https://github.com/thoughtbot/guides/tree/main/git
+    * https://github.com/thoughtbot/guides/tree/main/code-review
+    
