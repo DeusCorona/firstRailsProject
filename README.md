@@ -42,14 +42,16 @@
     * The general flow of action is: form inside View sends a POST request via routes to adequate method inside coresponding controller where data can be separated, analyzed and used
     
 * Useful git workflow commands:
-git status - overview of the changes made in relation to current branch
-git add . - add all changed files to prepare for commit
-git commit -m "Some commit message" - commits the added changes to prepare for push
-git push - push changes onto the targeted branch
-git branch -all - displays all available branches
-git checkout - changes branch you're currently on
-git checkout -b "name of the branch you wish to create and position onto"
-git push --set-upstream origin "name of the branch you have created in previous step"
+ 1. git status - overview of the changes made in relation to current branch
+ 2. git add . - add all changed files to prepare for commit
+ 3. git commit -m "Some commit message" - commits the added changes to prepare for push
+ 4. git push - push changes onto the targeted branch
+ 5. git branch -all - displays all available branches
+ 6. git checkout - changes branch you're currently on
+ 7. git checkout -b "name of the branch you wish to create and position onto"
+ 8. git push --set-upstream origin "name of the branch you have created in previous step"
+ 9. git rebase --interactive COMMIT_ID - opens editor where you can select from the list of commits you have made to the branch, change to squash next to commit you wish to squash. Second file will be opened where you can edit the commit message you wish to save all your commits under.
+ 10. git push --force --set-upstream origin name_of_your_remote_branch - finalize the rebase with this
 
 * Notes about maintaining git repo, branch naming conventions:
     * https://github.com/thoughtbot/guides/tree/main/git
