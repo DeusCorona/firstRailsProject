@@ -54,4 +54,5 @@ git push --set-upstream origin "name of the branch you have created in previous 
 * Notes about maintaining git repo, branch naming conventions:
     * https://github.com/thoughtbot/guides/tree/main/git
     * https://github.com/thoughtbot/guides/tree/main/code-review
+    * https://www.internalpointers.com/post/squash-commits-into-one-git
     
